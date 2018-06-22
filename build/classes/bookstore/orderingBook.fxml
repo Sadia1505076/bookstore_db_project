@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="623.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.OrderingBookController">
+   <children>
+      <HBox prefHeight="544.0" prefWidth="868.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="544.0" prefWidth="316.0" style="-fx-background-color: #FBFCFC;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="318.0" style="-fx-background-color: #27AE60;" text="CUSTOMER INFO">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="custname" focusColor="#27ae60" labelFloat="true" prefHeight="37.0" prefWidth="305.0" promptText="NAME" unFocusColor="#27ae60">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="custadd" focusColor="#27ae60" labelFloat="true" layoutX="20.0" layoutY="95.0" prefHeight="37.0" prefWidth="305.0" promptText="ADDRESS" unFocusColor="#27ae60">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="custemail" focusColor="#27ae60" labelFloat="true" layoutX="10.0" layoutY="132.0" prefHeight="37.0" prefWidth="305.0" promptText="EMAIL ID" unFocusColor="#27ae60">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="custphone" focusColor="#27ae60" labelFloat="true" layoutX="10.0" layoutY="169.0" prefHeight="37.0" prefWidth="305.0" promptText="PHONE NO" unFocusColor="#27ae60">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="40.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <DatePicker fx:id="orderdate" prefHeight="25.0" prefWidth="331.0">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="60.0" />
+                     </VBox.margin>
+                  </DatePicker>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="625.0" prefWidth="613.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="821.0" style="-fx-background-color: #27AE60;" text="ORDER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="67.0" prefWidth="658.0" style="-fx-background-color: #D5F5E3;">
+                     <children>
+                        <ImageView fitHeight="66.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-book-96.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <ScrollPane prefHeight="507.0" prefWidth="664.0">
+                     <content>
+                        <VBox fx:id="vboxmain" prefHeight="2034.0" prefWidth="599.0" style="-fx-background-color: #FBFCFC;">
+                           <children>
+                              <VBox fx:id="vboxbookauthor" prefHeight="87.0" prefWidth="658.0" spacing="20.0">
+                                 <children>
+                                    <HBox prefHeight="71.0" prefWidth="560.0" spacing="15.0">
+                                       <children>
+                                          <JFXTextField fx:id="bookname" focusColor="#27ae60" labelFloat="true" prefHeight="37.0" prefWidth="167.0" promptText="BOOK NAME" unFocusColor="#27ae60">
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets top="20.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                          <VBox fx:id="vboxauthor" prefWidth="167.0" spacing="20.0">
+                                             <children>
+                                                <JFXTextField fx:id="authorname" focusColor="#27ae60" labelFloat="true" layoutX="30.0" layoutY="20.0" prefHeight="37.0" prefWidth="0.0" promptText="AUTHOR NAME" unFocusColor="#27ae60">
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </HBox.margin>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <JFXButton fx:id="addauhtor" contentDisplay="TOP" onAction="#handleAddA" prefHeight="50.0" prefWidth="94.0" text="ADD AUTHOR">
+                                             <graphic>
+                                                <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../icons/if_sign-add_299068.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <JFXButton fx:id="addbook" contentDisplay="TOP" onAction="#handleAddB" prefHeight="50.0" prefWidth="94.0" text="ADD BOOK">
+                                       <graphic>
+                                          <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/if_sign-add_299068.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets left="480.0" top="20.0" />
+                                       </VBox.margin>
+                                       <HBox.margin>
+                                          <Insets left="180.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="search" contentDisplay="TOP" onAction="#handleSearch" prefHeight="61.0" prefWidth="72.0" text="BY BOOK">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/icons8-search-50.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="search2" contentDisplay="TOP" layoutX="364.0" layoutY="10.0" onAction="#handleSearchByBA" prefHeight="61.0" prefWidth="131.0" text="BY BOOK &amp; AUTHOR">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/icons8-search-50.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <VBox fx:id="vboxtable" prefHeight="386.0" prefWidth="585.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

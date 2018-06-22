@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="628.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.ReceiptController">
+   <children>
+      <ScrollPane prefHeight="628.0" prefViewportHeight="626.0" prefViewportWidth="616.0" prefWidth="528.0">
+         <content>
+            <VBox fx:id="vmain" prefHeight="2000.0" prefWidth="528.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="51.0" prefWidth="624.0" style="-fx-background-color: #D5F5E3;" text="BOOK STORE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="616.0" text="MIRPUR,DHAKA-1216">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="23.0" prefWidth="616.0" text="bookstore@gmail.com" />
+                  <HBox prefHeight="13.0" prefWidth="596.0" spacing="20.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="26.0" prefWidth="56.0" text="DATE:">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date" prefHeight="25.0" prefWidth="132.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="26.0" prefWidth="92.0" text="INVOICE #:">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="invoice" prefHeight="26.0" prefWidth="102.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label prefHeight="26.0" prefWidth="67.0" text="TO">
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="custName" prefHeight="22.0" prefWidth="281.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="custAdd" prefHeight="22.0" prefWidth="281.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="custEmail" prefHeight="20.0" prefWidth="281.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="custPhone" prefHeight="18.0" prefWidth="281.0">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="46.0" prefWidth="616.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="122.0" style="-fx-font-weight: bold;" text="BOOK NAME">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="34.0" prefWidth="52.0" style="-fx-font-weight: bold;" text="QTY" />
+                        <Label prefHeight="34.0" prefWidth="87.0" style="-fx-font-weight: bold;" text="UNIT PRICE" />
+                        <Label prefHeight="34.0" prefWidth="92.0" style="-fx-font-weight: bold;" text="DISCOUNT(%)" />
+                        <Label prefHeight="34.0" prefWidth="61.0" style="-fx-font-weight: BOLD;" text="VAT(%)" />
+                        <Label prefHeight="34.0" prefWidth="98.0" style="-fx-font-weight: bold;" text="TOTAL PRICE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

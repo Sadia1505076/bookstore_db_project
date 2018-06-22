@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="bookstore.jnlp">
+  <information>
+    <title>bookstore</title>
+    <vendor>ASUS</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="bookstore.jar" size="211479" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2414497" download="eager" />
+    <jar href="lib\ojdbc7-12.1.0.2.jar" size="3700718" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="bookstore" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="bookstore.Bookstore"  name="bookstore" />
+  <update check="always"/>
+</jnlp>

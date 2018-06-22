@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="409.0" prefWidth="389.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="bookstore.DailyProController">
+   <children>
+      <VBox prefHeight="409.0" prefWidth="389.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="403.0" style="-fx-background-color: #D5F5E3;" text="BOOK STORE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="23.0" prefWidth="616.0" text="bookstore@gmail.com" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="616.0" text="MIRPUR,DHAKA-1216">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="173.0" text="Daily Profit And Sale">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="100.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <HBox>
+               <children>
+                  <Label layoutX="40.0" layoutY="123.0" prefHeight="35.0" prefWidth="88.0" text="Total sale:">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="sale" prefHeight="35.0" prefWidth="144.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label layoutX="10.0" layoutY="158.0" prefHeight="35.0" prefWidth="61.0" text="Profit:">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="profit" prefHeight="35.0" prefWidth="144.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

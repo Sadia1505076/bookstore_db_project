@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="366.0" prefWidth="470.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="bookstore.EditproController">
+   <children>
+      <VBox prefHeight="366.0" prefWidth="470.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="49.0" prefWidth="470.0" style="-fx-background-color: #DC7633;" text="EDIT YOIR PROFILE" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="48.0" prefWidth="470.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="58.0" text="NAME:">
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="name" prefHeight="25.0" prefWidth="263.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="59.0" prefHeight="48.0" prefWidth="470.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="85.0" text="DESIGNATION:">
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="designation" prefHeight="25.0" prefWidth="235.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="107.0" prefHeight="48.0" prefWidth="470.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="58.0" text="ADDRESS:">
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="address" prefHeight="25.0" prefWidth="263.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="155.0" prefHeight="48.0" prefWidth="470.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="58.0" text="EMAIL ID:">
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="email" prefHeight="25.0" prefWidth="263.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="203.0" prefHeight="48.0" prefWidth="470.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="69.0" text="PHONE NO:">
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="phone" prefHeight="25.0" prefWidth="254.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <JFXButton fx:id="save" onAction="#handleSave" prefHeight="42.0" prefWidth="89.0" text="SAVE">
+               <VBox.margin>
+                  <Insets left="320.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

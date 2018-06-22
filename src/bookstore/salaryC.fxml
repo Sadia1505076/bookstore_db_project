@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="473.0" prefWidth="344.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="bookstore.SalaryCController">
+   <children>
+      <VBox prefHeight="399.0" prefWidth="413.0" style="-fx-background-color: #D1FEF2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="43.0" prefWidth="413.0" style="-fx-background-color: #000000;" text="CHANGE SALARY &amp; COMMISSION" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="ecombo" focusColor="BLACK" prefHeight="25.0" prefWidth="464.0" unFocusColor="BLACK">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <JFXTextField fx:id="empid" focusColor="BLACK" labelFloat="true" promptText="ENTER EMPLOYEE ID" unFocusColor="BLACK">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton ellipsisString="" onAction="#handleOk" prefHeight="39.0" prefWidth="56.0">
+               <VBox.margin>
+                  <Insets left="250.0" top="30.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/checked.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <VBox fx:id="vboxShow" prefHeight="235.0" prefWidth="344.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

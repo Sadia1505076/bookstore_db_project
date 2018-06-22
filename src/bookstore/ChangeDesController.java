@@ -1,0 +1,135 @@
+
+package bookstore;
+
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
+import java.net.URL;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+
+
+public class ChangeDesController implements Initializable {
+     ObservableList<String> SCombo=FXCollections.observableArrayList("STAFF","MANAGER");
+    @FXML
+    private JFXComboBox<String> ecombo;
+    @FXML
+    private JFXTextField EID;
+    @FXML
+    private JFXTextField DESIGNATION;
+  
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+        
+        ecombo.setValue("STAFF");
+        ecombo.setItems(SCombo);
+        ecombo.setValue("MANAGER");
+        ecombo.setItems(SCombo);
+    }
+
+    @FXML
+    private void HANDLESAVE(ActionEvent event) throws ClassNotFoundException, SQLException {
+        boolean is=false; 
+        try {
+            int a = Integer.parseInt(EID.getText());
+        } catch (NumberFormatException e) {
+            is = true;
+            EID.setText("* ENTER A NUMBER");
+            EID.setStyle("-fx-text-fill:#E74C3C;-fx-faint-focus-color: transparent; -fx-focus-color:rgba(255,0,0,0.2);");
+
+        }
+        if(DESIGNATION.getText().isEmpty())
+        {
+            DESIGNATION.setText("* REQUIRED");
+            DESIGNATION.setStyle("-fx-text-fill:#E74C3C;-fx-faint-focus-color: transparent; -fx-focus-color:rgba(255,0,0,0.2);");
+            is=true;
+        }
+        if(!is)
+        {
+            Class.forName("oracle.jdbc.OracleDriver");
+            Connection conn = new DBConnection().getConnection();
+            ResultSet rs = null,rs2=null;
+            //String nlikethis = "%" + name.toLowerCase() + "%";
+            PreparedStatement pst = null;
+            String sql=null;
+          
+            if (ecombo.getValue().equals("STAFF")) {
+                sql = "SELECT STAFF_ID FROM STAFFS WHERE STAFF_ID=?";
+                pst = conn.prepareStatement(sql);
+                pst.setInt(1, Integer.parseInt(EID.getText()));
+                pst.executeUpdate();
+                rs = pst.executeQuery();
+                if (rs.next()) {
+
+                    String getDBUSERByUserIdSql = "{call CHANGE_STAFF_DESIGNATION(?,?)}";
+                    CallableStatement callableStatement = null;
+                    callableStatement = conn.prepareCall(getDBUSERByUserIdSql);
+                    callableStatement.setInt(1, Integer.parseInt(EID.getText()));
+                    callableStatement.setString(2,DESIGNATION.getText());
+                    callableStatement.executeUpdate();
+
+                    Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+                    al.setHeaderText(null);
+                    al.setContentText("CHANGED SUCCESSFULLY!!!");
+                    al.showAndWait();
+                    EID.clear();
+                    DESIGNATION.clear();
+
+                } else {
+                    Alert al = new Alert(Alert.AlertType.ERROR);
+                    al.setHeaderText(null);
+                    al.setContentText("STAFF DOESN'T EXIST!!!");
+                    al.showAndWait();
+                    EID.clear();
+                    DESIGNATION.clear();
+
+                }
+            }
+            if (ecombo.getValue().equals("MANAGER")) {
+           
+                sql = "SELECT MANAGER_ID FROM MANAGERS WHERE MANAGER_ID=?";
+                pst = conn.prepareStatement(sql);
+                pst.setInt(1, Integer.parseInt(EID.getText()));
+                pst.executeUpdate();
+                rs2 = pst.executeQuery();
+                if (rs2.next()) {
+
+                    String getDBUSERByUserIdSql = "{call CHANGE_MANAGER_DESIGNATION(?,?)}";
+                    CallableStatement callableStatement = null;
+                    callableStatement = conn.prepareCall(getDBUSERByUserIdSql);
+                    callableStatement.setInt(1, Integer.parseInt(EID.getText()));
+                    callableStatement.setString(2,DESIGNATION.getText());
+                    callableStatement.executeUpdate();
+
+                    Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+                    al.setHeaderText(null);
+                    al.setContentText("CHANGED SUCCESSFULLY!!!");
+                    al.showAndWait();
+                    EID.clear();
+                    DESIGNATION.clear();
+
+                } else {
+                    Alert al = new Alert(Alert.AlertType.ERROR);
+                    al.setHeaderText(null);
+                    al.setContentText("MANAGER DOESN'T EXIST!!!");
+                    al.showAndWait();
+                    EID.clear();
+                    DESIGNATION.clear();
+
+                }
+            }
+           
+        }
+    }
+    
+}

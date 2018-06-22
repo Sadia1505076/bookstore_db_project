@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.bookstoreController">
+   <children>
+      <ScrollPane hbarPolicy="ALWAYS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" vbarPolicy="ALWAYS">
+         <content>
+            <VBox fx:id="mainVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2500.0" prefWidth="900.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: #566573;" text="PLEASE FILL UP ALL THE SECTORS!" textFill="#e5e7e9">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #566573;" text="BOOK-INFO" textFill="#e5e7e9">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/book-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <HBox prefHeight="69.0" prefWidth="890.0" spacing="30.0">
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXTextField fx:id="bookname" focusColor="#566573" labelFloat="true" prefHeight="25.0" prefWidth="193.0" promptText="BOOK NAME" unFocusColor="#566573" />
+                        <JFXTextField fx:id="totalamount" focusColor="#566573" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="191.0" promptText="TOTAL AMOUNT" unFocusColor="#566573" />
+                        <Label text="DATE:">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin></Label>
+                        <DatePicker fx:id="datepicker" onAction="#handleDatePickerAction" />
+                       
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #566573;" text="AUTHOR-INFO" textFill="#e5e7e9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <VBox fx:id="vboxofAuthor" prefHeight="87.0" prefWidth="900.0">
+                     <children>
+                        <HBox prefHeight="68.0" prefWidth="900.0" spacing="20.0">
+                           <children>
+                              <JFXTextField fx:id="authorname" focusColor="#566573" labelFloat="true" prefHeight="25.0" prefWidth="193.0" promptText="AUTHOR NAME" unFocusColor="#566573" />
+                              <JFXTextField fx:id="nationality" focusColor="#566573" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="171.0" promptText="NATIONALITY" unFocusColor="#566573" />
+                              <Label text="BIRTHDATE:">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin></Label>
+                        <DatePicker fx:id="datepicker3" onAction="#handleDatePickerAction3" prefHeight="25.0" prefWidth="131.0">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></DatePicker>
+                              <JFXTextField fx:id="writingyear" focusColor="#566573" labelFloat="true" layoutX="454.0" layoutY="30.0" prefHeight="25.0" prefWidth="104.0" promptText="WRITING YEAR" unFocusColor="#566573" />
+                              <JFXButton fx:id="addAuthor" contentDisplay="TOP" ellipsisString="" onAction="#addAnAouthor" prefHeight="53.0" prefWidth="70.0" text="add">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/ic_add_circle_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="20.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #566573;" text="LOCATION-INFO" textFill="#e5e7e9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/pin-8-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <HBox layoutX="20.0" layoutY="170.0" prefHeight="68.0" prefWidth="900.0" spacing="30.0">
+                     <children>
+                        <JFXTextField fx:id="floor" focusColor="#566573" labelFloat="true" prefHeight="25.0" prefWidth="193.0" promptText="FLOOR" unFocusColor="#566573" />
+                        <JFXTextField fx:id="row" focusColor="#566573" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="191.0" promptText="ROW" unFocusColor="#566573" />
+                        <JFXTextField fx:id="section" focusColor="#566573" labelFloat="true" layoutX="145.0" layoutY="10.0" prefHeight="25.0" prefWidth="178.0" promptText="SECTION" unFocusColor="#566573" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="268.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #566573;" text="PUBLISHER-INFO" textFill="#e5e7e9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox layoutX="20.0" layoutY="170.0" prefHeight="68.0" prefWidth="900.0" spacing="50.0">
+                     <children>
+                        <JFXTextField fx:id="pcompname" focusColor="#566573" labelFloat="true" prefHeight="25.0" prefWidth="193.0" promptText="COMPANY NAME" unFocusColor="#566573" />
+                        <JFXTextField fx:id="paddress" focusColor="#566573" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="191.0" promptText="ADDRESS" unFocusColor="#566573" />
+                        <JFXTextField fx:id="pemail" focusColor="#566573" labelFloat="true" layoutX="145.0" layoutY="10.0" prefHeight="25.0" prefWidth="178.0" promptText="EMAIL ID" unFocusColor="#566573" />
+                        <JFXTextField fx:id="country" focusColor="#566573" labelFloat="true" layoutX="494.0" layoutY="10.0" prefHeight="25.0" prefWidth="170.0" promptText="COUNTRY" unFocusColor="#566573" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="20.0" layoutY="653.0" prefHeight="68.0" prefWidth="900.0" spacing="50.0">
+                     <children>
+                        <JFXTextField fx:id="pphoneno" focusColor="#566573" labelFloat="true" prefHeight="25.0" prefWidth="193.0" promptText="PHONE NO" unFocusColor="#566573" />
+                        <Label text="PUBLISHING DATE:">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin></Label>
+                        <DatePicker fx:id="datepicker2" onAction="#handleDatePickerAction2">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></DatePicker>
+                        
+                        <JFXTextField fx:id="bookpublished" focusColor="#566573" labelFloat="true" layoutX="145.0" layoutY="10.0" prefHeight="25.0" prefWidth="178.0" promptText="# OF BOOK PUBLISHED" unFocusColor="#566573" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="268.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #566573;" text="SUPPLIER-INFO" textFill="#e5e7e9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox fx:id="vboxsupp">
+                     <children>
+                        <HBox layoutX="20.0" layoutY="741.0" prefHeight="68.0" prefWidth="900.0" spacing="50.0">
+                           <children>
+                              <JFXTextField fx:id="scomname" focusColor="#566573" labelFloat="true" prefHeight="25.0" prefWidth="193.0" promptText="COMPANY NAME" unFocusColor="#566573" />
+                              <JFXTextField fx:id="saddress" focusColor="#566573" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="191.0" promptText="ADDRESS" unFocusColor="#566573" />
+                              <JFXTextField fx:id="semail" focusColor="#566573" labelFloat="true" layoutX="145.0" layoutY="10.0" prefHeight="25.0" prefWidth="178.0" promptText="EMAIL ID" unFocusColor="#566573" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="68.0" prefWidth="900.0" spacing="30.0">
+                           <children>
+                              <JFXTextField fx:id="sphoneno" focusColor="#566573" labelFloat="true" prefHeight="25.0" prefWidth="193.0" promptText="PHONE NO" unFocusColor="#566573" />
+                              <JFXTextField fx:id="edition" focusColor="#566573" labelFloat="true" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="171.0" promptText="EDITION" unFocusColor="#566573" />
+                              <JFXTextField fx:id="amountofb" focusColor="#566573" labelFloat="true" layoutX="145.0" layoutY="10.0" prefHeight="25.0" prefWidth="178.0" promptText="AMOUNT OF BOOK" unFocusColor="#566573" />
+                              <JFXTextField fx:id="bpperb" focusColor="#566573" labelFloat="true" layoutX="454.0" layoutY="30.0" prefHeight="25.0" prefWidth="144.0" promptText="BUYING PRICE PER BOOK" unFocusColor="#566573" />
+                              <JFXButton fx:id="addSupplier" contentDisplay="TOP" ellipsisString="" onAction="#addASupplier" prefHeight="53.0" prefWidth="70.0" text="add">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/ic_add_circle_black_24dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" top="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <JFXButton fx:id="submit" contentDisplay="TOP" onAction="#pressingSubmit" prefHeight="50.0" prefWidth="100.0" text="SUBMIT">
+                     <VBox.margin>
+                        <Insets left="400.0" top="50.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/ic_send_black_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

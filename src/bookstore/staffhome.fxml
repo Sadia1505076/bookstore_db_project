@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="537.0" prefWidth="816.0" stylesheets="@addingbook.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.StaffhomeController">
+   <children>
+      <JFXTabPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="My Profile">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <VBox prefHeight="487.0" prefWidth="816.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="59.0" prefWidth="262.0" spacing="30.0">
+                                       <children>
+                                          <Label blendMode="SRC_ATOP" prefHeight="35.0" prefWidth="86.0" text="NAME:" textFill="#944a4a">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="name" layoutX="60.0" layoutY="30.0" prefHeight="35.0" prefWidth="304.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="30.0" prefHeight="66.0" prefWidth="816.0" spacing="30.0">
+                                       <children>
+                                          <Label blendMode="SRC_ATOP" prefHeight="41.0" prefWidth="112.0" text="DESIGNATION:" textFill="#944a4a">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="designation" layoutX="60.0" layoutY="30.0" prefHeight="30.0" prefWidth="304.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="89.0" prefHeight="66.0" prefWidth="816.0" spacing="30.0">
+                                       <children>
+                                          <Label blendMode="SRC_ATOP" prefHeight="36.0" prefWidth="84.0" text="ADDRESS:" textFill="#944a4a">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="address" layoutX="60.0" layoutY="30.0" prefHeight="30.0" prefWidth="304.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="155.0" prefHeight="66.0" prefWidth="816.0" spacing="30.0">
+                                       <children>
+                                          <Label blendMode="SRC_ATOP" prefHeight="36.0" prefWidth="86.0" text="PHONE NO:" textFill="#944a4a">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="phoneno" layoutX="60.0" layoutY="30.0" prefHeight="30.0" prefWidth="304.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="221.0" prefHeight="66.0" prefWidth="816.0" spacing="30.0">
+                                       <children>
+                                          <Label blendMode="SRC_ATOP" prefHeight="33.0" prefWidth="87.0" text="EMAIL ID:" textFill="#944a4a">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label fx:id="emailid" layoutX="60.0" layoutY="30.0" prefHeight="30.0" prefWidth="304.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <JFXButton fx:id="editPro" onAction="#handleeditPro" prefHeight="38.0" prefWidth="87.0" styleClass="button_edit" text="EDIT PROFILE">
+                                       <VBox.margin>
+                                          <Insets left="250.0" top="30.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Lists">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox fx:id="hbox" prefHeight="487.0" prefWidth="816.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="492.0" prefWidth="228.0" style="-fx-background-color: #273746;">
+                                 <children>
+                                    <JFXButton fx:id="booklist" onAction="#handleBookList" prefHeight="59.0" prefWidth="228.0" text="BOOK LIST">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="34.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/book-48.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton layoutX="10.0" layoutY="10.0" onAction="#custmerList" prefHeight="62.0" prefWidth="228.0" text="CUSTOMER LIST">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="33.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/icons8-user-40.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton layoutX="10.0" layoutY="69.0" onAction="#buyBook" prefHeight="62.0" prefWidth="228.0" text="BUY BOOK">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton layoutX="10.0" layoutY="131.0" onAction="#orderBook" prefHeight="62.0" prefWidth="228.0" text="ORDER  BOOK">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton layoutX="10.0" layoutY="193.0" onAction="#orderList" prefHeight="62.0" prefWidth="228.0" text="ORDER LIST">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton layoutX="10.0" layoutY="193.0" onAction="#orderBookById" prefHeight="62.0" prefWidth="228.0" text="ORDER BY PER BOOK ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vbox2" prefHeight="487.0" prefWidth="616.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Update">
+               <content>
+                  <AnchorPane fx:id="DIS" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="vatVbox" layoutX="26.0" layoutY="103.0" prefHeight="292.0" prefWidth="327.0" style="-fx-background-color: #82E0AA;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="338.0" style="-fx-background-color: #273746;" text="UPDATE VAT" textFill="#ebebeb">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <HBox fx:id="hboxVat" prefHeight="56.0" prefWidth="305.0" spacing="10.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXComboBox fx:id="vatCombo" onAction="#addbookidV" prefHeight="25.0" prefWidth="146.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXTextField fx:id="bookidVat" editable="false" focusColor="BLACK" labelFloat="true" prefHeight="25.0" prefWidth="147.0" promptText="BOOK ID" unFocusColor="BLACK">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hVat" prefHeight="100.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="vatStaff" focusColor="BLACK" labelFloat="true" prefHeight="25.0" prefWidth="147.0" promptText="VAT" unFocusColor="BLACK">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <JFXButton ellipsisString="" onAction="#handleVat" prefHeight="38.0" prefWidth="55.0">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/checked.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="250.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="disVbox" layoutX="417.0" layoutY="104.0" prefHeight="290.0" prefWidth="327.0" style="-fx-background-color: #82E0AA;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="338.0" style="-fx-background-color: #273746;" text="UPDATE DISCOUNT" textFill="#ebebeb">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <HBox fx:id="hboxDis" prefHeight="56.0" prefWidth="305.0" spacing="10.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXComboBox fx:id="DISCombo" onAction="#addbookidD" prefHeight="26.0" prefWidth="130.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXTextField fx:id="bookidDis" editable="false" focusColor="BLACK" labelFloat="true" prefHeight="25.0" prefWidth="144.0" promptText="BOOK ID" unFocusColor="BLACK">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hDis" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="disStaff" focusColor="BLACK" labelFloat="true" prefHeight="25.0" prefWidth="144.0" promptText="DISCOUNT" unFocusColor="BLACK">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <JFXButton ellipsisString="" onAction="#handleDis" prefHeight="38.0" prefWidth="55.0">
+                                 <graphic>
+                                    <ImageView fitHeight="37.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/checked.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="250.0" top="20.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

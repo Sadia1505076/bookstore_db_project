@@ -1,0 +1,66 @@
+*{
+    -fx-primary:#566573;
+    -fx-secondary:#D5D8DC;
+    -fx-primarytext:#F2F3F4;
+    -fx-red:#E74C3C  ;
+}
+.root{
+    -fx-background-color:#F2F3F4  ;
+}
+.button{
+    -fx-text-fill:#D0D3D4; 
+}
+
+.button:hover{
+    -fx-background-color:#808B96;
+}
+
+.tab{
+    -fx-background-color:#A52A2A  ;
+    -fx-pref-height:50;
+    -fx-pref-width:100;
+    -fx-text-fill:#D0D3D4 ; 
+}
+.tab-header-background{
+    -fx-background-color:#A52A2A;
+    -fx-text-fill:#D0D3D4 ; 
+}
+/*.jfxtextfield{
+    -fx-text-size:15pt;
+}*/
+.tab-pane {
+  -fx-tab-min-width:120px;
+  -fx-tab-max-width:200px;
+  -fx-tab-min-height:50px;
+  -fx-tab-max-height:50px;
+}
+
+.button_edit{
+    -fx-background-color:#A04000;
+    -fx-text-fill:#FBFCFC; 
+}
+.button_requ{
+    -fx-background-color:#273746;
+    -fx-text-fill:#FBFCFC; 
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+}
+.button_salary{
+    -fx-background-color:#273746;
+    -fx-text-fill:#FBFCFC; 
+    -fx-border-radius:20px;
+    -fx-background-radius:20px;
+}
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #A52A2A;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color:  #A52A2A;
+}
+.combo-box-popup-signup .list-view .list-cell:hover {
+    -fx-background-color:  #ffffff;
+}
+
+.combo-box-popup-signup .list-view .list-cell:selected {
+    -fx-background-color:  #ffffff;}
